@@ -1,0 +1,547 @@
+/* ==========================================================================
+   Portofolio Kimsyel Fransky
+   Daftar isi:
+   1. Variabel & tema
+   2. Reset & dasar
+   3. Layout & header
+   4. Tombol
+   5. Hero & foto
+   6. Tentang & blok kode
+   7. Skills
+   8. Projects
+   9. Kontak & footer
+   10. Responsif & aksesibilitas
+   ========================================================================== */
+
+
+/* 1. Variabel & tema
+   ========================================================================== */
+:root {
+  /* Warna */
+  --bg: #f2f5fb;
+  --surface: #ffffff;
+  --ink: #0e1a36;
+  --muted: #5a6684;
+  --line: #d9e0ee;
+  --accent: #2b55f5;
+  --accent-ink: #ffffff;
+  --sun: #ffc83d;
+
+  /* Font */
+  --font-display: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+  --font-body: "DM Sans", "Segoe UI", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", Consolas, monospace;
+}
+
+/* Tema gelap mengikuti pengaturan perangkat */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1226;
+    --surface: #131c38;
+    --ink: #eaf0ff;
+    --muted: #9aa8cc;
+    --line: #243055;
+    --accent: #7c9bff;
+    --accent-ink: #0b1226;
+  }
+}
+
+
+/* 2. Reset & dasar
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+label:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  margin: 0 0 18px;
+  font-family: var(--font-display);
+  font-size: 22px;
+}
+
+section {
+  padding: 64px 0;
+  border-top: 1px solid var(--line);
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sub {
+  max-width: 56ch;
+  margin: 0 0 36px;
+  color: var(--muted);
+}
+
+
+/* 3. Header & navigasi
+   ========================================================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+nav ul {
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul a {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  color: var(--accent);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+
+/* 4. Tombol
+   ========================================================================== */
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: transparent;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.main {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn.small {
+  padding: 6px 16px;
+  border-width: 1.5px;
+  font-size: 14px;
+}
+
+
+/* 5. Hero & foto
+   ========================================================================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+  padding: 72px 0 56px;
+}
+
+.hello {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-family: var(--font-display);
+  font-size: clamp(46px, 8.5vw, 96px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+h1 span {
+  display: block;
+  width: fit-content;
+  background: linear-gradient(transparent 62%, var(--sun) 62% 90%, transparent 90%);
+}
+
+.lead {
+  max-width: 46ch;
+  margin: 0 0 30px;
+  color: var(--muted);
+}
+
+/* Foto profil */
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.frame {
+  position: relative;
+  width: min(100%, 320px);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--surface);
+  border: 3px solid var(--ink);
+  border-radius: 160px 160px 24px 24px;
+  box-shadow: 12px 12px 0 var(--sun);
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 96px;
+  font-weight: 800;
+}
+
+/* Dipakai script.js saat foto belum tersedia */
+.frame.empty img {
+  display: none;
+}
+
+.frame.empty .placeholder {
+  display: flex;
+}
+
+
+/* 6. Tentang & blok kode
+   ========================================================================== */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.facts {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.facts div {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.facts dt {
+  flex: none;
+  width: 110px;
+  color: var(--muted);
+}
+
+.facts dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.code {
+  align-self: start;
+  padding: 22px 24px;
+  overflow-x: auto;
+  background: #0e1a36;
+  border-radius: 16px;
+  box-shadow: 10px 10px 0 var(--sun);
+  color: #dce6ff;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.code .dots {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.code .dots i {
+  width: 11px;
+  height: 11px;
+  background: #3a4a7a;
+  border-radius: 50%;
+}
+
+.code .k {
+  color: #7c9bff;
+}
+
+.code .s {
+  color: #ffc83d;
+}
+
+.caret {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #ffc83d;
+  vertical-align: -3px;
+  animation: blink 1s steps(2) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/* 7. Skills
+   ========================================================================== */
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.bar {
+  margin-bottom: 18px;
+}
+
+.bar > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.track {
+  height: 10px;
+  overflow: hidden;
+  background: var(--line);
+  border-radius: 99px;
+}
+
+/* Lebar diisi oleh script.js dari atribut data-level */
+.track i {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 99px;
+  transition: width 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 8px 16px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+/* 8. Projects
+   ========================================================================== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 22px;
+}
+
+.proj {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 26px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.proj:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.proj:nth-child(2) {
+  border-radius: 6px 28px 6px 28px;
+}
+
+.proj:nth-child(3) {
+  border-radius: 28px 6px 28px 6px;
+}
+
+.proj h3 {
+  margin: 0;
+}
+
+.proj p {
+  flex: 1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.proj a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.proj a:hover {
+  text-decoration: underline;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  padding: 4px 10px;
+  background: var(--bg);
+  border-radius: 6px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+
+/* 9. Kontak & footer
+   ========================================================================== */
+.contact {
+  text-align: center;
+}
+
+.contact .sub {
+  margin-inline: auto;
+}
+
+.contact .btns {
+  justify-content: center;
+}
+
+footer {
+  padding: 28px 0 36px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* 10. Responsif & aksesibilitas
+   ========================================================================== */
+@media (max-width: 780px) {
+  .hero,
+  .about,
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 44px;
+  }
+
+  /* Foto tampil lebih dulu di layar kecil */
+  .photo {
+    order: -1;
+  }
+
+  nav ul {
+    gap: 14px;
+  }
+
+  nav ul a {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
