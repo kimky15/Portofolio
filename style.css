@@ -46,6 +46,9 @@
   }
 }
 
+body {
+  caret-color: transparent;
+}
 
 /* 2. Reset & dasar
    ========================================================================== */
@@ -399,6 +402,10 @@ h1 span {
   background: var(--accent);
   border-radius: 99px;
   transition: width 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.group + .group {
+  margin-top: 32px;
 }
 
 .chips {

@@ -1,121 +1,198 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kimsyel Fransky – Portofolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kimsyel Fransky – Portofolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header><div class="wrap"><nav>
-<a class="logo" href="#top">KF</a>
-<ul><li><a href="#tentang">Tentang</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#kontak">Kontak</a></li></ul>
-</nav></div></header>
 
-<main id="top">
-<div class="wrap">
-<div class="hero">
-<div>
-<p class="hello">Halo, saya</p>
-<h1>Kimsyel <span>Fransky</span></h1>
-<p class="lead">Mahasiswa Computer Science di BINUS University. Saya suka membangun aplikasi yang rapi, berguna, dan mudah dipakai.</p>
-<div class="btns"><a class="btn main" href="#projects">Lihat projects</a><a class="btn" href="#kontak">Hubungi saya</a></div>
-</div>
+    <!-- ===== Header ===== -->
+    <header>
+        <div class="wrap">
+            <nav>
+                <a class="logo" href="#top">KF</a>
+                <ul>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- KOLOM FOTO: taruh file foto.jpg di folder yang sama, atau klik tombol "Ganti foto" untuk pratinjau -->
-<figure class="photo">
-<div class="frame">
-<img id="foto" src="foto.jpg" alt="Foto Kimsyel Fransky">
-<div class="placeholder" id="fotoPlaceholder" aria-hidden="true">KF</div>
-</div>
-<figcaption>
-<!-- <label class="btn small" for="fotoInput">Ganti foto</label>
-<input type="file" id="fotoInput" accept="image/*" hidden> -->
-</figcaption>
-</figure>
-</div>
-</div>
+    <main id="top">
 
-<section id="tentang"><div class="wrap about">
-    <div>
-        <h2>Tentang saya</h2>
-        <p class="sub">Saya belajar Computer Science dengan fokus pada pemrograman, struktur data, dan pengembangan perangkat lunak. Saya senang mengubah ide menjadi proyek nyata dan terus belajar dari setiap proyek.</p>
-        <dl class="facts">
-            <div><dt>Nama</dt><dd>Kimsyel Fransky</dd></div>
-            <div><dt>Kampus</dt><dd>BINUS University</dd></div>
-            <div><dt>Jurusan</dt><dd>Computer Science</dd></div>
-            <div><dt>Minat</dt><dd>Web development, AI, problem solving</dd></div>
-        </dl>
-        </div>
-            <div class="code" aria-label="Ringkasan profil dalam bentuk kode">
-            <div class="dots"><i></i><i></i><i></i></div>
-            <div><span class="k">const</span> kimsyel = {</div>
-            <div>&nbsp;&nbsp;kampus: <span class="s">"BINUS University"</span>,</div>
-            <div>&nbsp;&nbsp;jurusan: <span class="s">"Computer Science"</span>,</div>
-            <div>&nbsp;&nbsp;bahasa: [<span class="s">"Python"</span>, <span class="s">"Java"</span>, <span class="s">"JavaScript"</span>],</div>
-            <div>&nbsp;&nbsp;sedangDipelajari: <span class="s">"Web &amp; AI"</span>,</div>
-        <div>};<span class="caret"></span></div>
-        </div>
-    </div>
-</section>
+        <!-- ===== Hero ===== -->
+        <div class="wrap">
+            <div class="hero">
+                <div>
+                    <p class="hello">Halo, saya</p>
+                    <h1>Kimsyel <span>Fransky</span></h1>
+                    <p class="lead">Mahasiswa Computer Science di BINUS University. Saya suka membangun aplikasi yang rapi, berguna, dan mudah dipakai.</p>
+                    <div class="btns">
+                        <a class="btn main" href="#projects">Lihat projects</a>
+                        <a class="btn" href="#kontak">Hubungi saya</a>
+                    </div>
+                </div>
 
-<section id="skills"><div class="wrap">
-    <h2>Skills</h2>
-    <p class="sub">Bahasa pemrograman yang saya gunakan dan keahlian pendukungnya.</p>
-    <div class="skills">
-        <div>
-            <h3>Bahasa pemrograman</h3>
-            <div class="bar"><div><span>Python</span><span>85%</span></div><div class="track"><i data-level="85"></i></div></div>
-            <div class="bar"><div><span>Java</span><span>70%</span></div><div class="track"><i data-level="70"></i></div></div>
-            <div class="bar"><div><span>JavaScript</span><span>75%</span></div><div class="track"><i data-level="75"></i></div></div>
-            <div class="bar"><div><span>C++</span><span>65%</span></div><div class="track"><i data-level="65"></i></div></div>
-            <div class="bar"><div><span>SQL</span><span>80%</span></div><div class="track"><i data-level="80"></i></div></div>
-            <div class="bar"><div><span>HTML &amp; CSS</span><span>85%</span></div><div class="track"><i data-level="85"></i></div></div>
+                <!-- Foto: simpan sebagai foto.jpg di folder yang sama dengan file ini -->
+                <figure class="photo">
+                    <div class="frame">
+                        <img id="foto" src="foto.jpg" alt="Foto Kimsyel Fransky">
+                        <div class="placeholder" aria-hidden="true">KF</div>
+                    </div>
+                </figure>
+            </div>
         </div>
-        <div>
-            <h3>Tools</h3>
-            <div class="chips">
-            <span class="chip">Git &amp; GitHub</span>
-            <span class="chip">MySQL</span>
-            <span class="chip">React</span>
-            <span class="chip">VS Code</span>
-        </div>
-        <div>
-            <h3>Keahlian</h3>
-            <div class="chips">
-            <span class="chip">Algoritma</span>
-            <span class="chip">Problem Solving</span>
-            <span class="chip">Kerja Tim</span>
-        </div>
-    </div>
-</section>
 
-<section id="projects"><div class="wrap">
-    <h2>Projects</h2>
-    <p class="sub">Beberapa proyek yang pernah saya kerjakan.</p>
-    <div class="projects">
-        <article class="proj"><h3>Aplikasi Manajemen Tugas</h3><p>Aplikasi web untuk mencatat, mengelompokkan, dan menandai tugas kuliah beserta tenggat waktunya.</p><div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div><a href="#">Lihat project</a></article>
-        <article class="proj"><h3>Sistem Perpustakaan</h3><p>Program berbasis Java dengan konsep OOP untuk mengelola data buku, anggota, dan peminjaman.</p><div class="tags"><span>Java</span><span>MySQL</span></div><a href="#">Lihat project</a></article>
-        <article class="proj"><h3>Analisis Data Mahasiswa</h3><p>Analisis dan visualisasi data menggunakan Python untuk menemukan pola dari dataset nilai.</p><div class="tags"><span>Python</span><span>Pandas</span></div><a href="#">Lihat project</a></article>
-    </div>
-</section>
+        <!-- ===== Tentang ===== -->
+        <section id="tentang">
+            <div class="wrap about">
+                <div>
+                    <h2>Tentang saya</h2>
+                    <p class="sub">Saya belajar Computer Science dengan fokus pada pemrograman, struktur data, dan pengembangan perangkat lunak. Saya senang mengubah ide menjadi proyek nyata dan terus belajar dari setiap proyek.</p>
+                    <dl class="facts">
+                        <div><dt>Nama</dt><dd>Kimsyel Fransky</dd></div>
+                        <div><dt>Kampus</dt><dd>BINUS University</dd></div>
+                        <div><dt>Jurusan</dt><dd>Computer Science</dd></div>
+                        <div><dt>Minat</dt><dd>Web development, AI, problem solving</dd></div>
+                    </dl>
+                </div>
 
-<section id="kontak" class="contact">
-    <div class="wrap">
-        <h2>Mari terhubung</h2>
-        <p class="sub">Tertarik berkolaborasi atau ingin ngobrol soal teknologi? Silakan hubungi saya.</p>
-        <div class="btns">
-            <a class="btn main" href="mailto:email@contoh.com">Kirim email</a>
-            <a class="btn" href="#">GitHub</a>
-            <a class="btn" href="#">LinkedIn</a>
-            <a class="btn" href="#">Whatsapp</a>
-        </div>
-    </div>
-</section>
-</main>
-<footer>© <span id="year">2026</span> Kimsyel Fransky · BINUS University</footer>
-<script src="script.js"></script>
+                <div class="code" aria-label="Ringkasan profil dalam bentuk kode">
+                    <div class="dots"><i></i><i></i><i></i></div>
+                    <div><span class="k">const</span> kimsyel = {</div>
+                    <div>&nbsp;&nbsp;kampus: <span class="s">"BINUS University"</span>,</div>
+                    <div>&nbsp;&nbsp;jurusan: <span class="s">"Computer Science"</span>,</div>
+                    <div>&nbsp;&nbsp;bahasa: [<span class="s">"Python"</span>, <span class="s">"Java"</span>, <span class="s">"JavaScript"</span>],</div>
+                    <div>&nbsp;&nbsp;sedangDipelajari: <span class="s">"Web &amp; AI"</span>,</div>
+                    <div>};<span class="caret"></span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Skills ===== -->
+        <section id="skills">
+            <div class="wrap">
+                <h2>Skills</h2>
+                <p class="sub">Bahasa pemrograman yang saya gunakan dan keahlian pendukungnya.</p>
+
+                <div class="skills">
+                    <!-- Kolom kiri: bahasa pemrograman (angka = persen kemampuan) -->
+                    <div>
+                        <h3>Bahasa pemrograman</h3>
+                        <div class="bar">
+                            <div><span>Python</span><span>85%</span></div>
+                            <div class="track"><i data-level="85"></i></div>
+                        </div>
+                        <div class="bar">
+                            <div><span>Java</span><span>70%</span></div>
+                            <div class="track"><i data-level="70"></i></div>
+                        </div>
+                        <div class="bar">
+                            <div><span>JavaScript</span><span>75%</span></div>
+                            <div class="track"><i data-level="75"></i></div>
+                        </div>
+                        <div class="bar">
+                            <div><span>C++</span><span>65%</span></div>
+                            <div class="track"><i data-level="65"></i></div>
+                        </div>
+                        <div class="bar">
+                            <div><span>SQL</span><span>80%</span></div>
+                            <div class="track"><i data-level="80"></i></div>
+                        </div>
+                        <div class="bar">
+                            <div><span>HTML &amp; CSS</span><span>85%</span></div>
+                            <div class="track"><i data-level="85"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Kolom kanan: tools dan keahlian -->
+                    <div>
+                        <div class="group">
+                            <h3>Tools</h3>
+                            <div class="chips">
+                                <span class="chip">Git &amp; GitHub</span>
+                                <span class="chip">MySQL</span>
+                                <span class="chip">React</span>
+                                <span class="chip">VS Code</span>
+                            </div>
+                        </div>
+
+                        <div class="group">
+                            <h3>Keahlian</h3>
+                            <div class="chips">
+                                <span class="chip">Algoritma</span>
+                                <span class="chip">Problem Solving</span>
+                                <span class="chip">Kerja Tim</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Projects ===== -->
+        <section id="projects">
+            <div class="wrap">
+                <h2>Projects</h2>
+                <p class="sub">Beberapa proyek yang pernah saya kerjakan.</p>
+
+                <div class="projects">
+                    <article class="proj">
+                        <h3>Aplikasi Manajemen Tugas</h3>
+                        <p>Aplikasi web untuk mencatat, mengelompokkan, dan menandai tugas kuliah beserta tenggat waktunya.</p>
+                        <div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+                        <a href="#">Lihat project</a>
+                    </article>
+
+                    <article class="proj">
+                        <h3>Sistem Perpustakaan</h3>
+                        <p>Program berbasis Java dengan konsep OOP untuk mengelola data buku, anggota, dan peminjaman.</p>
+                        <div class="tags"><span>Java</span><span>MySQL</span></div>
+                        <a href="#">Lihat project</a>
+                    </article>
+
+                    <article class="proj">
+                        <h3>Analisis Data Mahasiswa</h3>
+                        <p>Analisis dan visualisasi data menggunakan Python untuk menemukan pola dari dataset nilai.</p>
+                        <div class="tags"><span>Python</span><span>Pandas</span></div>
+                        <a href="#">Lihat project</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Kontak ===== -->
+        <section id="kontak" class="contact">
+            <div class="wrap">
+                <h2>Mari terhubung</h2>
+                <p class="sub">Tertarik berkolaborasi atau ingin ngobrol soal teknologi? Silakan hubungi saya.</p>
+                <div class="btns">
+                    <a class="btn main" href="mailto:email@contoh.com">Kirim email</a>
+                    <a class="btn" href="#">GitHub</a>
+                    <a class="btn" href="#">LinkedIn</a>
+                    <a class="btn" href="#">WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        © <span id="year">2026</span> Kimsyel Fransky · BINUS University
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
